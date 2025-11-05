@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string("payment_method")->nullable();        
             $table->string("payment_status")->nullable();        
             $table->string("currency")->nullable();        
-            $table->enum('status', ['new','processing','completed','declined','cancel' ])->default('new');
+            $table->enum('status', ['new','processing','completed','shipped','delivered','canceled' ])->default('new');
             $table->text('notes')->nullable();
             $table->timestamps();
         });
